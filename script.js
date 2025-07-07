@@ -1,41 +1,52 @@
-let mostraHTML = document.getElementById("mostraHTML")
-let numero = 0
-let num1 = 0
-let num2 = 0
-let num3 = 0
-let num4 = 0
-
-
-mostraHTML.innerHTML = `<p> Numero de cliques: ${cliques}</p>`;
-
 
 function ADICIONAR() {
-    let frase
 
-    num_adiv = Number(window.prompt("COLOQUE O NOME DO SEU TIME"));
-    alert("qual os integrantes do seu time?")
-    num_adiv3 = Number(window.prompt("Primeiro integrante "));
-    num_adiv4 = Number(window.prompt("segundo integrante"));
-    num_adiv5 = Number(window.prompt("terceiro integrante"));
-    
-
-    
-    resultado = num1 * num2;
-
-    
-    frase = mostraHTML.innerHTML += `<p> Seu time foi adicionado!</p>`
-    
+let mostraHTML = document.getElementById("mostraHTML");
+let times = prompt("Escreva o nome do seu time");
+let limiteTimes = 4;
+alert("Escreva qual o nome dos jogadores.");
 
 
-    if (num_adiv === numero) {
-        alert("qual o nome do seu time" + resultado + "seu time foi adicionado!");
-    }else {
-        alert("Seu time foi adicionado" + resultado + " Com sucesso!");
-
-        mostraHTML.innerHTML == `<p>SEU TIME: ${numero}!</p>`
-    }   
-
-    
+let jogador1 = prompt("Escreva o nome do primeiro jogador").toLowerCase();
+let idade1 = Number(window.prompt("Digite sua idade"));
+let jogador2 = prompt("Escreva o nome do segundo jogador").toLowerCase();
+let idade2 = Number(window.prompt("Digite sua idade"));
+let jogador3 = prompt("Escreva o nome do terceiro jogador").toLowerCase();
+let idade3 = Number(window.prompt("Digite sua idade"));
 
 
+
+let idade_media = (idade1 + idade2 + idade3) / 3;
+
+let num = parseInt(idade_media);
+
+
+if(idade_media > 15)  {
+    alert("O jogador ultrapassOU o limite de idade.");
+    alert("Tente novamente com um time válido!");
+    mostraHTML.innerHTML = `<p>Coloque outro jogador para conseguir participar.</p>`
+}
+
+if(times === limiteTimes) {
+    alert("Infelizmente as inscrições já se encerraram.");
+}else{
+  
+}
+
+
+mostraHTML.innerHTML += `<P><b>TIME: ${times}, MÉDIA DO TIME: ${num}</b></P>`
+
+mostraHTML.innerHTML += `<p>primeiro jogador: ${jogador1}, idade:${idade1}</p>`
+
+mostraHTML.innerHTML += `<p>segundo jogador: ${jogador2}, idade:${idade2}</p>`
+
+mostraHTML.innerHTML += `<p>perceiro jogador: ${jogador3}, idade:${idade3}</p>`
+
+
+
+
+
+
+
+ 
 }

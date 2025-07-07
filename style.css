@@ -1,7 +1,11 @@
 body  {
-    background-color: darkturquoise;
+    background-color: cornflowerblue;
 }
 
 button  {
+    background-color: darkorchid;
+    padding: 50px;
+    border-radius: 20px;
+    bottom: center;
     color: black;
 }
