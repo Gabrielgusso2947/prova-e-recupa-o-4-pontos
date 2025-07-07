@@ -45,9 +45,9 @@ function ADICIONAR() {
 
     if (contador === limiteTimes) {
         alert("Essa foi a ultima inscrição do interclasse.") 
-        alert("As inscrições foram encerradas.")  
+        alert("As inscrições vão ser encerradas.")  
 
-        mostraHTML.innerHTML += `<p>as inscrições foram encerradas.</p>`.toLowerCase();
+        mostraHTML.innerHTML += `<p>as inscrições foram encerradas.</p>`.toUpperCase();
 
     }
 
